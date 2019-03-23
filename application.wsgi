@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, redirect, jsonify, url_for
 from sqlalchemy import create_engine, asc, desc
 from sqlalchemy.orm import sessionmaker
-from models import Base, Category, Item, User
+import sys
+sys.path.insert(0, '/var/www/catalog/models')
+
+import Base, Category, Item, User
 from flask import session as login_session
 import random
 import string
