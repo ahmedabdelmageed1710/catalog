@@ -60,7 +60,7 @@ class Item(Base):
         }
 
 
-engine = create_engine('postgresql:///itemcatalog.db')
+engine = create_engine('postgresql:///itemcatalog.sql')
 
 
 Base.metadata.create_all(engine)
