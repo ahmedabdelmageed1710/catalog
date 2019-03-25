@@ -21,7 +21,7 @@ CLIENT_ID = json.loads(
 
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///itemcatalog.db', connect_args={'check_same_thread': False})
+engine = create_engine('sqlite:///itemcatalog.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
