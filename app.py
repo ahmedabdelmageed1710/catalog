@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, redirect, jsonify, url_for, flash
 from sqlalchemy import create_engine, asc, desc
 from sqlalchemy.orm import sessionmaker
-import sys
-sys.path.insert(0, "/var/www/html/catalog")
+#import sys
+#sys.path.insert(0, "/var/www/html/catalog")
 from models import Base, Category, Item, User
 from flask import session as login_session
 import random
@@ -21,7 +21,7 @@ CLIENT_ID = json.loads(
 
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///itemcatalog.db', connect_args={'check_same_thread': False})
+engine = create_engine('postgresql://catalog:@localhost/catalog')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
