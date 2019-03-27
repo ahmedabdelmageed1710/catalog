@@ -18,7 +18,6 @@ app = Flask(__name__)
 
 CLIENT_ID = json.loads(
     open('/var/www/html/catalog/client_secrets.json', 'r').read())['web']['client_id']
-return CLIENT_ID
 
 # Connect to Database and create database session
 engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
