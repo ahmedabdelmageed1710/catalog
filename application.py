@@ -258,8 +258,3 @@ def deleteItem(itemTitle):
         return redirect(url_for('showCategories'))
     else:
         return render_template('deleteItem.html')
-
-
-if __name__ == '__main__':
-    app.debug = True
-    app.run()
