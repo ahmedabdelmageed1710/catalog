@@ -208,3 +208,6 @@ using Google Accounts
 | Database Server | Database server has been configured to serve data (PostgreSQL)|
 | web server been configured to serve the Item Catalog application | Web server has been configured to serve the Item Catalog application as a WSGI app|
 | SSH hosted on non-default port | SSH is hosted on non-default port|
+
+## Resources
+https://knowledge.udacity.com/questions/31565
