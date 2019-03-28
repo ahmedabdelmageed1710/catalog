@@ -49,6 +49,129 @@ a0TdvjMSEHKFoyoRH1OuCfYlrjiMCwdIDSjhf0AyniK9ikjmnijPP4cf3mAjuigQ
 grader
 ```
 
+#Configuration
+
+### Install apache
+```
+sudo apt-get install apache2
+```
+
+### Installing mod_wsgi
+```
+sudo apt-get install libapache2-mod-wsgi
+```
+
+### edit
+```
+/etc/apache2/sites-enabled/000-default.conf
+```
+adding
+```
+WSGIScriptAlias / /var/www/html/catalog/application.wsgi
+```
+then
+```
+sudo apache2ctl restart
+```
+
+### Installing PostgreSQL
+```
+sudo apt-get install postgresql
+```
+
+### Installing git
+```
+sudo apt-get install git
+```
+
+### add user
+```
+sudo add user grader
+```
+
+### Giving Sudo Access
+create
+```
+/etc/sudoers.d/grader
+```
+add
+```
+grader ALL=(ALL) NOPASSWD:ALL
+```
+
+### Generating Key Pairs
+run on your local machine
+```
+ssh-keygen
+```
+give it name
+```
+linCourse
+```
+add this public key inside my server at
+```
+/home/grader/.ssh/authorized_keys
+```
+and run
+```
+chmod 700 .ssh
+chmod 600 .ssh/authorized_keys
+```
+
+### to handle permissions
+```
+sudo chown -R grader.grader /home/grader/.ssh
+```
+
+### ports
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 2200/tcp
+sudo ufw allow www
+sudo ufw allow ntp
+sudo ufw enable
+```
+
+### edit 
+```
+/etc/ssh/sshd_config
+```
+change ssh port from (22) to (2200) and edit (PermitRootLogin) set to (no)
+
+
+### connect to sesrver localy
+
+### add postgres user
+```
+sudo -u postgres createuser -P catalog
+```
+
+### create catalog database
+```
+sudo -u postgres createdb -O catalog catalog
+```
+
+### clone
+clone inside ** /var/www/html **
+
+### run
+```
+sudo pip install httplib2
+sudo pip install requests
+sudo pip install oauth2client
+sudo pip install sqlalchemy
+sudo pip install flask
+sudo pip install psycopg2
+```
+
+
+# Third-party Authentication
+
+```
+using Google Accounts
+```
+
 ## Rubric
 
 ## User Management
