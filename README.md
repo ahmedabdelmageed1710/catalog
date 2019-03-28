@@ -153,7 +153,7 @@ sudo -u postgres createdb -O catalog catalog
 ```
 
 ### clone
-clone inside ** /var/www/html **
+clone inside  ``/var/www/html``
 
 ### run
 ```
