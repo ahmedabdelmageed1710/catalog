@@ -51,7 +51,7 @@ grader
 
 ## Rubric
 
-##User Management
+## User Management
 
 |SECTION|CRITERIA|
 |---|---|
@@ -59,7 +59,7 @@ grader
 | Remote Login Disabled | You cannot log in as root remotely|
 | Sudo Access | grader User Has Sudo Access|
 
-##Security
+## Security
 
 |SECTION|CRITERIA|
 |---|---|
@@ -68,7 +68,7 @@ grader
 | Applications up-to-date | All system packages have been updated to most recent versions|
 | SSH hosted on non-default port | SSH is hosted on non-default port|
 
-##Application Functionality
+## Application Functionality
 
 |SECTION|CRITERIA|
 |---|---|
@@ -77,7 +77,7 @@ grader
 | web server been configured to serve the Item Catalog application | Web server has been configured to serve the Item Catalog application as a WSGI app|
 | SSH hosted on non-default port | SSH is hosted on non-default port|
 
-##Documentation
+## Documentation
 
 |SECTION|CRITERIA|
 |---|---|
